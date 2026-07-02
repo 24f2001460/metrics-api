@@ -41,7 +41,7 @@ def verify(req: TokenRequest):
         }
 
     except Exception:
-        raise HTTPException(
-            status_code=401,
-            detail={"valid": False},
-        )
+    return JSONResponse(
+        status_code=401,
+        content={"valid": False}
+    )
